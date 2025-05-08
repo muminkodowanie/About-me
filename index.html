@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dominik Marczak - CV</title>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #1e1e1e;
-      color: #e0e0e0;
+      color: #dcdcdc;
     }
+
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
-      background-color: #2a2a2a;
+      background-color: #2b2b2b;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 10px rgba(0,0,0,0.8);
     }
+
     h1, h2 {
-      color: #ffcc00;
+      color: #66bfff;
     }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      border-bottom: 1px solid #444;
+      padding-bottom: 6px;
+    }
+
     ul {
-      padding-left: 20px;
+      list-style: none;
+      padding-left: 0;
     }
+
+    li {
+      padding: 6px 0;
+    }
+
     a {
-      color: #66b2ff;
+      color: #66bfff;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 25px;
+
+    .skills, .projects, .goals, .languages, .hobbies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
     }
-    p, li {
-      line-height: 1.6;
+
+    .card {
+      background-color: #3a3a3a;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .button-switch {
+      background-color: #66bfff;
+      color: #1e1e1e;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .button-switch:hover {
+      background-color: #4fa6e8;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Dominik Marczak</h1>
-    <p><strong>Stanowisko:</strong> Intern</p>
+    <p><strong>Intern</strong></p>
+    <button class="button-switch" onclick="window.location.href='cv_en.html'">Switch to English</button>
 
     <div class="section">
       <h2>Kontakt</h2>
@@ -54,63 +96,19 @@
 
     <div class="section">
       <h2>O mnie</h2>
-      <p>Jestem studentem informatyki poszukującym pierwszej pracy lub stażu. Lubię pracować zespołowo i mam solidne podstawy w programowaniu i analizie danych. Jestem ambitny, otwarty na feedback i chętny do rozwoju zawodowego.</p>
-    </div>
-
-    <div class="section">
-      <h2>Wykształcenie</h2>
-      <p><strong>Uniwersytet Ekonomiczny w Katowicach</strong> (2023 - 2026)</p>
-      <ul>
-        <li>Kierunek: Informatyka</li>
-        <li>Specjalizacja: Bazy danych i analiza danych</li>
-        <li>Średnia: 4.40</li>
-      </ul>
+      <p>Student informatyki poszukujący pierwszej pracy lub stażu. Pracuję dobrze zespołowo, mam podstawy w programowaniu i analizie danych, jestem ambitny i otwarty na rozwój.</p>
     </div>
 
     <div class="section">
       <h2>Umiejętności</h2>
-      <ul>
-        <li>Programowanie: Python, JavaScript (React), R</li>
-        <li>Bazy danych: SQL, NoSQL (MongoDB)</li>
-        <li>Analiza danych i uczenie maszynowe w Pythonie</li>
-        <li>Web Development: HTML, CSS, JavaScript</li>
-        <li>Narzędzia: Git, Pandas, Matplotlib</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Języki</h2>
-      <ul>
-        <li>Polski (ojczysty)</li>
-        <li>Angielski (C1 – zaawansowany)</li>
-        <li>Niemiecki i rosyjski (A1 – podstawowy)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Projekty</h2>
-      <ul>
-        <li><strong>Finance App:</strong> Aplikacja do śledzenia wydatków i dochodów, z wizualizacjami danych.</li>
-        <li><strong>Analiza danych w Pythonie:</strong> Statystyki seriali TV analizowane za pomocą narzędzi graficznych.</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Cele</h2>
-      <ul>
-        <li>Zdobycie praktycznego doświadczenia</li>
-        <li>Udział w innowacyjnych projektach branży IT</li>
-        <li>Ciągły rozwój osobisty i zawodowy</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Zainteresowania</h2>
-      <ul>
-        <li>Gry: szczególnie RPG i single-player, np. Gothic</li>
-        <li>Muzyka: alternatywna polska i zagraniczna</li>
-        <li>Gry planszowe: RPG i strategiczne</li>
-      </ul>
+      <div class="skills">
+        <div class="card">Python, R</div>
+        <div class="card">JavaScript (React)</div>
+        <div class="card">HTML, CSS</div>
+        <div class="card">SQL, MongoDB</div>
+        <div class="card">Git, Pandas, Matplotlib</div>
+        <div class="card">Analiza danych, Machine Learning</div>
+      </div>
     </div>
   </div>
 </body>
