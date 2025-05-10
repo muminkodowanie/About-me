@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dominik Marczak - CV</title>
   <style>
     body {
@@ -74,86 +74,177 @@
       cursor: pointer;
       font-weight: bold;
       transition: background 0.3s;
+      margin-bottom: 20px;
     }
 
     .button-switch:hover {
       background-color: #4fa6e8;
     }
   </style>
+  <script>
+    function toggleLanguage() {
+      const pl = document.getElementById('pl');
+      const en = document.getElementById('en');
+      const btn = document.getElementById('lang-btn');
+      if (pl.style.display === 'none') {
+        pl.style.display = 'block';
+        en.style.display = 'none';
+        btn.innerText = 'Switch to English';
+      } else {
+        pl.style.display = 'none';
+        en.style.display = 'block';
+        btn.innerText = 'Przełącz na polski';
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="container">
-    <h1>Dominik Marczak</h1>
-    <p><strong>Intern</strong></p>
-    <button class="button-switch" onclick="window.location.href='cv_en.html'">Switch to English</button>
+    <button class="button-switch" id="lang-btn" onclick="toggleLanguage()">Switch to English</button>
 
-    <div class="section">
-      <h2>Kontakt</h2>
-      <p>Email: <a href="mailto:dominikmarczak60@gmail.com">dominikmarczak60@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/muminkodowanie" target="_blank">muminkodowanie</a></p>
-      <p>Telefon: +48 724 630 687</p>
-    </div>
+    <!-- POLSKA WERSJA -->
+    <div id="pl">
+      <h1>Dominik Marczak</h1>
+      <p><strong>Intern</strong></p>
 
-    <div class="section">
-      <h2>O mnie</h2>
-      <p>Student informatyki poszukujący pierwszej pracy lub stażu. Potrafię pracować zespołowo, mam solidne podstawy programowania i analizy danych, jestem ambitny i otwarty na dalszy rozwój.</p>
-    </div>
-
-    <div class="section">
-      <h2>Umiejętności</h2>
-      <div class="skills">
-        <div class="card">Python, R, C# / C++</div>
-        <div class="card">JavaScript (React)</div>
-        <div class="card">HTML, CSS</div>
-        <div class="card">SQL, MongoDB</div>
-        <div class="card">Git, Pandas, Matplotlib</div>
-        <div class="card">Analiza danych, Machine Learning</div>
+      <div class="section">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:dominikmarczak60@gmail.com">dominikmarczak60@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/muminkodowanie" target="_blank">muminkodowanie</a></p>
+        <p>Telefon: +48 724 630 687</p>
       </div>
-    </div>
 
-    <div class="section">
-      <h2>Projekty</h2>
-      <div class="projects">
-        <div class="card">
-          <strong>Finance App</strong><br>
-          Aplikacja webowa do śledzenia wydatków i dochodów.
-          <p><a href= "https://github.com/muminkodowanie/Aplikacja-Bankowa-Node.js-React" target="_blank"> Link</a></p>
-        </div>
-        <div class="card">
-          <strong>Data Analysis with Python</strong><br>
-          Analiza statystyk serialu Dr House za pomocą Pythona.
-          <p><a href= "https://github.com/muminkodowanie/Data_Analysis_Python" target="_blank"> Link</a></p>
+      <div class="section">
+        <h2>O mnie</h2>
+        <p>Student informatyki poszukujący pierwszej pracy lub stażu. Potrafię pracować zespołowo, mam solidne podstawy programowania i analizy danych, jestem ambitny i otwarty na dalszy rozwój.</p>
+      </div>
+
+      <div class="section">
+        <h2>Umiejętności</h2>
+        <div class="skills">
+          <div class="card">Python, R, C# / C++</div>
+          <div class="card">JavaScript (React)</div>
+          <div class="card">HTML, CSS</div>
+          <div class="card">SQL, MongoDB</div>
+          <div class="card">Git, Pandas, Matplotlib</div>
+          <div class="card">Analiza danych, Machine Learning</div>
         </div>
       </div>
-    </div>
 
-    <div class="section">
-      <h2>Cele</h2>
-      <ul>
-        <li>Zdobycie praktycznego doświadczenia</li>
-        <li>Udział w innowacyjnych i poważnych projektach</li>
-        <li>Rrozwój osobisty i zawodowy</li>
-      </ul>
-    </div>
+      <div class="section">
+        <h2>Projekty</h2>
+        <div class="projects">
+          <div class="card">
+            <strong>Finance App</strong><br>
+            Aplikacja webowa do śledzenia wydatków i dochodów.
+            <p><a href="https://github.com/muminkodowanie/Aplikacja-Bankowa-Node.js-React" target="_blank">Link</a></p>
+          </div>
+          <div class="card">
+            <strong>Data Analysis with Python</strong><br>
+            Analiza statystyk serialu Dr House za pomocą Pythona.
+            <p><a href="https://github.com/muminkodowanie/Data_Analysis_Python" target="_blank">Link</a></p>
+          </div>
+        </div>
+      </div>
 
-    <div class="section">
-      <h2>Języki</h2>
-      <div class="languages">
-        <div class="card">Polski (ojczysty)</div>
-        <div class="card">Angielski (C1 – zaawansowany)</div>
-        <div class="card">Niemiecki, fiński i rosyjski (A1 – podstawowy)</div>
+      <div class="section">
+        <h2>Cele</h2>
+        <ul>
+          <li>Zdobycie praktycznego doświadczenia</li>
+          <li>Udział w innowacyjnych i poważnych projektach</li>
+          <li>Rozwój osobisty i zawodowy</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Języki</h2>
+        <div class="languages">
+          <div class="card">Polski (ojczysty)</div>
+          <div class="card">Angielski (C1 – zaawansowany)</div>
+          <div class="card">Niemiecki, fiński i rosyjski (A1 – podstawowy)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Zainteresowania</h2>
+        <ul>
+          <li>Gry: RPG, indie, rogue like, single-player, np. Gothic</li>
+          <li>Muzyka: alternatywna; polska i zagraniczna</li>
+          <li>Gry planszowe: RPG i strategiczne</li>
+        </ul>
       </div>
     </div>
+    <div id="en" style="display: none;">
+      <h1>Dominik Marczak</h1>
+      <p><strong>Intern</strong></p>
 
-    <div class="section">
-      <h2>Zainteresowania</h2>
-      <ul>
-        <li>Gry: RPG, indie, rogue like, single-player, np. Gothic</li>
-        <li>Muzyka: alternatywna; polska i zagraniczna</li>
-        <li>Gry planszowe: RPG i strategiczne</li>
-      </ul>
+      <div class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:dominikmarczak60@gmail.com">dominikmarczak60@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/muminkodowanie" target="_blank">muminkodowanie</a></p>
+        <p>Phone: +48 724 630 687</p>
+      </div>
+
+      <div class="section">
+        <h2>About Me</h2>
+        <p>Computer Science student seeking a first job or internship. I work well in teams, have a solid programming and data analysis background, and I’m ambitious and eager to grow.</p>
+      </div>
+
+      <div class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+          <div class="card">Python, R, C# / C++</div>
+          <div class="card">JavaScript (React)</div>
+          <div class="card">HTML, CSS</div>
+          <div class="card">SQL, MongoDB</div>
+          <div class="card">Git, Pandas, Matplotlib</div>
+          <div class="card">Data analysis, Machine Learning</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="card">
+            <strong>Finance App</strong><br>
+            Web application for tracking income and expenses.
+            <p><a href="https://github.com/muminkodowanie/Aplikacja-Bankowa-Node.js-React" target="_blank">Link</a></p>
+          </div>
+          <div class="card">
+            <strong>Data Analysis with Python</strong><br>
+            Analyzing the Dr. House series statistics with Python.
+            <p><a href="https://github.com/muminkodowanie/Data_Analysis_Python" target="_blank">Link</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Goals</h2>
+        <ul>
+          <li>Gain hands-on experience</li>
+          <li>Take part in innovative and serious projects</li>
+          <li>Grow personally and professionally</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Languages</h2>
+        <div class="languages">
+          <div class="card">Polish (native)</div>
+          <div class="card">English (C1 – advanced)</div>
+          <div class="card">German, Finnish, and Russian (A1 – basic)</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Games: RPG, indie, rogue-like, single-player (e.g. Gothic)</li>
+          <li>Music: alternative (Polish and international)</li>
+          <li>Board games: RPG and strategy</li>
+        </ul>
+      </div>
     </div>
-
   </div>
 </body>
 </html>
